@@ -1,1 +1,1 @@
-# :balloon: Algorithm - JAVA :balloon:
+# :balloon: Algorithm :balloon:
