@@ -59,15 +59,15 @@ Stack<Element> stack = new Stack<>();
 ```
 
 < 메소드 >
-* boolean empty()
+* `boolean empty()`
   * 해당 스택이 비어 있으면 true를, 비어 있지 않으면 false를 반환함.
-* E peek()
+* `E peek()`
   * 해당 스택의 제일 상단에 있는(제일 마지막으로 저장된) 요소를 반환함.
-* E pop()
+* `E pop()`
   * 해당 스택의 제일 상단에 있는(제일 마지막으로 저장된) 요소를 반환하고, 해당 요소를 스택에서 제거함.
-* E push(E item)
+* `E push(E item)`
   * 해당 스택의 제일 상단에 전달된 요소를 삽입함.
-* int search(Object o)
+* `int search(Object o)`
   * 해당 스택에서 전달된 객체가 존재하는 위치의 인덱스를 반환함. 이때 인덱스는 제일 상단에 있는(제일 마지막으로 저장된) 요소의 위치부터 0이 아닌 1부터 시작함.
 
 - 예제
@@ -99,15 +99,15 @@ Queue<V> queue = new LinkedList<>();
 이론적으로는 연결리스트의 특성을 갖는 `LinekdList`가 효율이 좋아야 하지만, 실제로는 `ArrayDeque`이 속도가 조금 더 빠르다고 한다.
 
 < 메소드 >
-* boolean add(E e)
+* `boolean add(E e)`
   * 해당 큐의 맨 뒤에 전달된 요소를 삽입함. 만약 삽입에 성공하면 true를 반환하고, 큐에 여유 공간이 없어 삽입에 실패하면 IllegalStateException을 발생시킴.
-* E element()
+* `E element()`
   * 해당 큐의 맨 앞에 있는(제일 먼저 저장된) 요소를 반환함.
-* boolean offer(E e)
+* `boolean offer(E e)`
   * 해당 큐의 맨 뒤에 전달된 요소를 삽입함.
-* E peek()
+* `E peek()`
   * 해당 큐의 맨 앞에 있는(제일 먼저 저장된) 요소를 반환함. 만약 큐가 비어있으면 null을 반환함.
-* E poll()
+* `E poll()`
   * 해당 큐의 맨 앞에 있는(제일 먼저 저장된) 요소를 반환하고, 해당 요소를 큐에서 제거함. 만약 큐가 비어있으면 null을 반환함.
-* E remove()
+* `E remove()`
   * 해당 큐의 맨 앞에 있는(제일 먼저 저장된) 요소를 제거함.
