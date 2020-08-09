@@ -111,3 +111,17 @@ Queue<V> queue = new LinkedList<>();
   * 해당 큐의 맨 앞에 있는(제일 먼저 저장된) 요소를 반환하고, 해당 요소를 큐에서 제거함. 만약 큐가 비어있으면 null을 반환함.
 * `E remove()`
   * 해당 큐의 맨 앞에 있는(제일 먼저 저장된) 요소를 제거함.
+* `E clear()`
+  * 큐에 저장된 모든 데이터를 삭제하고 큐를 초기화함.
+
+### ➕ 우선순위 큐
+
+우선순위 큐(Priority Queue)는 들어간 순서에 상관없이 일정한 규칙에 따라 우선순위를 선정하고, 우선순위가 가장 높은 데이터가 가장 먼저 나오게 된다.
+
+```java
+PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
+PriorityQueue<Integer> priorityQueue = new PriorityQueue<>(Collections.reverseOrder());
+```
+
+→ 기본적으로 낮은 숫자부터 큰 숫자까지 오름차순으로 정렬됨  
+→ `Collections.reversOrder()` 로 생성하면 최대값 기준으로 우선순위가 정렬됨
