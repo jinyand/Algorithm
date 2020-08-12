@@ -4,6 +4,7 @@
 - [HashMap](#mag-hash-map)
 - [Stack](#mag-stack)
 - [Queue](#mag-queue)
+- [Dynamic Programming](#mag-dynamic-programming)
 
 ### JAVA 자료구조 
 - [ArrayList](#pushpin-arraylist)
@@ -132,6 +133,40 @@ PriorityQueue<Integer> priorityQueue = new PriorityQueue<>(Collections.reverseOr
 
 ---
 
+### :mag: Dynamic Programming
+다이나믹 프로그래밍(Dynamic Programming) : 동적 계획법(DP) 이란
+
+- 복잡한 문제를 여러 개의 작은 부분 문제(Sub-Problem)로 나누어 해결하는 방법
+- 한번의 계산을 통해, 비효율적 계산을 줄인다는 개념
+- 대표적인 예시 : 피보나치 수열
+
+#### Memoization
+
+- 반복되는 결과를 메모리에 저장해서, 중복호출 되었을 때 한 번 더 계산하지 않고 메모리에 저장해둔 것을 가져와서 재활용 하는 것
+
+#### DP의 2가지 구현 방식
+
+1. **Top-Down**
+    - 뜻 그대로 큰 문제 → 작은 부분문제로 푸는 것
+    - `F(n) = F(n-1) + F(n-2)`  
+    → F(n)을 구하기 위해서는 F(n-1)과 F(n-2)를 구해야 한다.
+    - 장단점 : 재귀함수를 통해 구현되기 때문에 함수 호출에 대한 오버헤드가 발생하지만, Memoization을 잘 활용하면 Botton-Up보다 훨씬 속도가 빠르다.
+2. **Botton-Up**
+    - 작은 부분문제를 미리 계산해두고, 이 문제들을 모아 큰 문제를 해결
+
+    ```java
+    DP[1] = 1;
+    DP[2] = 1;
+     
+    for(int i=3;i<N;i++)
+        DP[i] = DP[i-2] + DP[i-1];
+    ```
+
+    → F(n-1)과 F(n-2)가 있으면 F(n)을 구할 수 있다.
+
+    - 장단점 : 큰 문제를 해결하기 위해 모든 부분문제를 해결해야하지만, for문으로 구현되므로 시간 및 메모리의 최적화가 쉽다.
+
+---
 ### :pushpin: ArrayList
 - List 인터페이스를 상속받은 클래스, Collection 인터페이스를 구현한 것
 - 크기가 가변적으로 변하는 선형리스트, 길이 지정 x, 자유롭게 확장 가능
