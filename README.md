@@ -8,6 +8,7 @@
 
 ### JAVA
 - [ArrayList](#pushpin-arraylist)
+- [Comparable / Comparator](#pushpin-comparable)
 
 ---
 
@@ -225,3 +226,41 @@ ArrayList, LinkedList 등은 List에 상속된 클래스들
 → 도형 list = new 정사각형();
 - ArrayList list = new ArrayList();  
 → 정사각형 list = new 정사각형();
+
+---
+
+### :pushpin: Comparable
+
+- 정의 : 정렬 수행시 기본적으로 적용되는 정렬 기준이 되는 메서드를 정의해 놓는 **인터페이스**
+- 사용법 : Comparable 인터페이스를 implements 한 뒤, 내부에 있는 compareTo 메서드를 원하는 정렬 기준대로 구현하여 사용한다.
+- 패키지 : java.lang.Comparable
+- 자바에서 제공되는 정렬이 가능한 클래스들은 모두 Comparable 인터페이스를 구현하고 있으며, 정렬 시에 Comparable의 구현 내용에 맞춰 정렬된다.
+    ```java
+    import java.lang.Comparable;
+
+    class Student implements Comparable<Student> {
+      @Override
+      public int compareTo(Student anotherStudent) { //오버라이딩
+        // 원하는 정렬 기준대로 구현
+        // TODO Auto-generated method stub
+        return 0;
+      }
+    }
+    ```
+
+### :pushpin: Comparator
+
+- 정의 : 정렬 가능한 클래스(= Comparable이 구현된 클래스) 들의 기본 정렬 기준과는 다른 방식으로 정렬하고 싶을 때 사용하는 **클래스**
+- 사용법 : Comparator 클래스를 생성하여, 내부에 compare 메서드를 원하는 정렬 기준대로 구현하여 사용한다.
+- 패키지 : java.util.Comparator
+- 주로 익명클래스(new Comparator(){...})로 사용되며, 기본적으로 오름차순이 정렬 기준인 것을 내림차순으로 정렬하는 등의 용도로 사용된다.
+    ```java
+    Arrays.sort(student, new Comparator<Student>(){ 
+      //익명클래스 사용, 제너릭스 주의
+      @Override
+      public int compare(Student s1, Student s2) {
+        // TODO Auto-generated method stub
+        return 0;
+      }
+    });
+    ```
