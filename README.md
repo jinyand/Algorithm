@@ -1,12 +1,12 @@
 # :balloon: Algorithm :balloon:
 
-### JAVA 알고리즘
+### 알고리즘
 - [HashMap](#mag-hash-map)
 - [Stack](#mag-stack)
 - [Queue](#mag-queue)
 - [Dynamic Programming](#mag-dynamic-programming)
 
-### JAVA 자료구조 
+### JAVA
 - [ArrayList](#pushpin-arraylist)
 
 ---
